@@ -26,7 +26,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:
 .scanline{position:fixed;top:0;left:0;width:100%;height:3px;
   background:linear-gradient(90deg,transparent,var(--accent-dim),transparent);
   animation:scanline 8s linear infinite;z-index:1;pointer-events:none;opacity:.4}
-.container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.container{max-width:1600px;width:90%;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 header{padding:80px 0 60px;text-align:left}
 .status-line{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:32px;display:flex;align-items:center;gap:10px}
 .status-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite}
@@ -36,8 +36,8 @@ h1 span{color:var(--accent)}
 .subtitle{font-family:var(--serif);font-size:1.15rem;color:var(--text-mid);max-width:660px;line-height:1.7;font-weight:300}
 .header-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
 .header-tag{font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;padding:5px 12px;border:1px solid var(--border);border-radius:2px;color:var(--text-mid);text-transform:uppercase;background:var(--bg-card)}
-.header-links{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
-.header-links a{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;color:var(--accent);text-decoration:none;padding:5px 16px;border:1px solid var(--accent-dim);border-radius:2px;transition:all .25s;display:inline-flex;align-items:center;gap:5px}
+.header-links{display:flex;gap:8px;margin-top:20px;margin-bottom:8px;flex-wrap:wrap;width:100%}
+.header-links a{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:var(--accent);text-decoration:none;padding:4px 12px;border:1px solid var(--accent-dim);border-radius:2px;transition:all .25s;display:inline-flex;align-items:center;gap:4px}
 .header-links a:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
 .section-label{font-family:var(--sans);font-size:1.3rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-bright);margin-bottom:40px;padding-bottom:16px;border-bottom:2px solid var(--accent);display:flex;align-items:center;gap:14px}
 .section-label::before{content:'';display:block;width:28px;height:3px;background:var(--accent);border-radius:2px}
@@ -77,14 +77,14 @@ h1 span{color:var(--accent)}
 .card-tags{display:flex;flex-wrap:wrap;gap:6px}
 .card-tag{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;padding:3px 9px;border-radius:2px;color:var(--text-mid);border:1px solid var(--border);text-transform:uppercase;transition:border-color .2s}
 .product-card:hover .card-tag{border-color:var(--border-glow)}
-.hero-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:40px;margin-bottom:0}
-.hero-photo{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--border);height:330px}
+.hero-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:32px;margin-bottom:0;clear:both;width:100%}
+.hero-photo{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--border);aspect-ratio:1/1;min-height:320px}
 .hero-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.9) contrast(1.05);transition:transform .5s cubic-bezier(.4,0,.2,1)}
 .hero-photo:hover img{transform:scale(1.04)}
 .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,11,14,.55));pointer-events:none}
 .hero-photo-label{position:absolute;bottom:12px;left:14px;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);z-index:1;background:rgba(10,11,14,.65);padding:3px 8px;border-radius:2px;backdrop-filter:blur(4px)}
-@media(max-width:860px){.hero-row{grid-template-columns:1fr 1fr}.hero-photo{height:240px}}
-@media(max-width:580px){.hero-row{grid-template-columns:1fr}.hero-photo{height:220px}}
+@media(max-width:700px){.hero-row{grid-template-columns:1fr 1fr}.hero-photo{aspect-ratio:4/3;min-height:220px}}
+@media(max-width:480px){.hero-row{grid-template-columns:1fr}.hero-photo{aspect-ratio:16/10;min-height:200px}}
 footer{padding:48px 0;border-top:1px solid var(--border);text-align:center;margin-top:20px}
 footer p{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--text-mid)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
